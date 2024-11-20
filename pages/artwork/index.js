@@ -18,16 +18,8 @@ export default function Artwork() {
 
   const { data, error } = useSWR(`https://collectionapi.metmuseum.org/public/collection/v1/search?${finalQuery}`);
 
-  function nextPage() {
-    if (page < artworkList.length) {
-      setPage(p => p + 1)
-    }
-  }
-
-  function previousPage() {
-    if (page > 1) {
-      setPage(p => p - 1);
-    }
+  function handlePage(page) {
+    setPage(p => page);
   }
 
   useEffect(() => {
@@ -79,9 +71,9 @@ export default function Artwork() {
           <Col className="d-flex justify-content-center p-4">
             <br />
             <Pagination>
-              {page > 1 && <Pagination.Prev onClick={previousPage} />}
+              {page > 1 && <Pagination.Prev onClick={() => handlePage(page - 1)} />}
               <Pagination.Item>{page}</Pagination.Item>
-              {page < artworkList.length && <Pagination.Next onClick={nextPage} />}
+              {page < artworkList.length && <Pagination.Next onClick={() => handlePage(page + 1)} />}
             </Pagination>
           </Col>
         </Row>
