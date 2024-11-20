@@ -40,7 +40,9 @@ export default function MainNav(){
     <>
     <Navbar  expand="lg" className="fixed-top navbar-dark bg-primary" expanded={isExpanded}>
       <Container>
-        <Navbar.Brand>In Tae Chung</Navbar.Brand>
+        <a href="https://github.com/entae" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none'}}>
+          <Navbar.Brand>In Tae Chung</Navbar.Brand>
+        </a>
         <Navbar.Toggle onClick={e=>{setIsExpanded(!isExpanded)}} aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
