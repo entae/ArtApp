@@ -76,7 +76,7 @@ export default function Artwork() {
 
         {artworkList.length > 0 && <Row>
 
-          <Col >
+          <Col className="d-flex justify-content-center p-4">
             <br />
             <Pagination>
               {page > 1 && <Pagination.Prev onClick={previousPage} />}
