@@ -5,6 +5,7 @@
  ********************************************************************************/
 
 import { Image, Row, Col } from "react-bootstrap";
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -25,17 +26,17 @@ export default function About() {
             <br />
             The data regarding the artworks are discovered from an API provided
             by the MET ({" "}
-            <a
+            <Link
               href="https://metmuseum.github.io/"
               target="_blank"
               rel="noreferrer"
             >
               https://metmuseum.github.io/
-            </a>{" "}
+            </Link>{" "}
             ). Aside from using the search bar in the navigation bar, the{" "}
-            <a href="/search" rel="noreferrer">
+            <Link href="/search" rel="noreferrer">
               Advanced Search
-            </a>{" "}
+            </Link>{" "}
             can be used to better filter the search results.
           </p>
         </Col>
@@ -53,9 +54,9 @@ export default function About() {
             solutions.
           </p>
           <p>
-            <a href="https://github.com/entae" target="_blank" rel="noreferrer">
+            <Link href="https://github.com/entae" target="_blank" rel="noreferrer">
               https://github.com/entae
-            </a>
+            </Link>
           </p>
         </Col>
       </Row>

@@ -25,7 +25,7 @@ export default function RouteGuard(props) {
     return () => {
       router.events.off('routeChangeComplete', handleRouteChange);
     };
-  }, []);
+  }, [authCheck, handleRouteChange, router.events, router.pathname, updateAtoms]);
 
   async function updateAtoms() {
     if (isAuthenticated()) {
