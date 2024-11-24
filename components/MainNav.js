@@ -51,8 +51,10 @@ export default function MainNav(){
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <Link href="/" passHref legacyBehavior><Nav.Link active={router.pathname === "/"} onClick={e=>{setIsExpanded(false)}}>Home</Nav.Link></Link>
+
             <Link href="/about" passHref legacyBehavior><Nav.Link active={router.pathname === "/about"} onClick={e=>{setIsExpanded(false)}}>About</Nav.Link></Link>
-            { token && <Link href="/search" passHref legacyBehavior><Nav.Link active={router.pathname === "/search"}>Advanced Search</Nav.Link></Link> }
+
+            { token && <Link href="/search" passHref legacyBehavior><Nav.Link active={router.pathname === "/search"} onClick={e=>{setIsExpanded(false)}}>Advanced Search</Nav.Link></Link> }
             { token && <br /> }
           </Nav>
 

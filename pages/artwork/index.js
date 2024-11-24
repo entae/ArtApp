@@ -85,7 +85,3 @@ export default function Artwork() {
     return null;
   }
 }
-
-
-
-
