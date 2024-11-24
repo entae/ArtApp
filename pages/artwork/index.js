@@ -45,10 +45,11 @@ export default function Artwork() {
   }
 
   if (artworkList) {
+    let lastPage = artworkList.length
     return (
       <>
 
-        {artworkList.length > 0 ?
+        {lastPage > 0 ?
 
           <Row className="gy-4">{artworkList[page - 1]?.map(objID => (
             <Col lg={3} key={objID}><ArtworkCard objectID={objID} /></Col>
@@ -66,14 +67,22 @@ export default function Artwork() {
 
         }
 
-        {artworkList.length > 0 && <Row>
+        {lastPage > 0 && <Row>
 
           <Col className="d-flex justify-content-center p-4">
             <br />
             <Pagination>
+              {page > 1 && <Pagination.First onClick={() => handlePage(1)} />}
               {page > 1 && <Pagination.Prev onClick={() => handlePage(page - 1)} />}
-              <Pagination.Item>{page}</Pagination.Item>
-              {page < artworkList.length && <Pagination.Next onClick={() => handlePage(page + 1)} />}
+
+              {page > 2 && <Pagination.Item onClick={() => handlePage(page - 2)}>{page - 2}</Pagination.Item>}
+              {page > 1 && <Pagination.Item onClick={() => handlePage(page - 1)}>{page - 1}</Pagination.Item>}
+              <Pagination.Item className="active">{page}</Pagination.Item>
+              {page < lastPage && <Pagination.Item onClick={() => handlePage(page + 1)}>{page + 1}</Pagination.Item>}
+              {page < lastPage && <Pagination.Item onClick={() => handlePage(page + 2)}>{page + 2}</Pagination.Item>}
+
+              {page < lastPage && <Pagination.Next onClick={() => handlePage(page + 1)} />}
+              {page < lastPage && <Pagination.Last onClick={() => handlePage(lastPage)} />}
             </Pagination>
           </Col>
         </Row>
