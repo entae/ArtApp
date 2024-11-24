@@ -72,17 +72,17 @@ export default function Artwork() {
           <Col className="d-flex justify-content-center p-4">
             <br />
             <Pagination>
-              {page > 1 && <Pagination.First onClick={() => handlePage(1)} />}
+              {page > 2 && <Pagination.First onClick={() => handlePage(1)} />}
               {page > 1 && <Pagination.Prev onClick={() => handlePage(page - 1)} />}
 
               {page > 2 && <Pagination.Item onClick={() => handlePage(page - 2)}>{page - 2}</Pagination.Item>}
               {page > 1 && <Pagination.Item onClick={() => handlePage(page - 1)}>{page - 1}</Pagination.Item>}
               <Pagination.Item className="active">{page}</Pagination.Item>
               {page < lastPage && <Pagination.Item onClick={() => handlePage(page + 1)}>{page + 1}</Pagination.Item>}
-              {page < lastPage && <Pagination.Item onClick={() => handlePage(page + 2)}>{page + 2}</Pagination.Item>}
+              {page < lastPage-1 && <Pagination.Item onClick={() => handlePage(page + 2)}>{page + 2}</Pagination.Item>}
 
               {page < lastPage && <Pagination.Next onClick={() => handlePage(page + 1)} />}
-              {page < lastPage && <Pagination.Last onClick={() => handlePage(lastPage)} />}
+              {page < lastPage-1 && <Pagination.Last onClick={() => handlePage(lastPage)} />}
             </Pagination>
           </Col>
         </Row>
