@@ -63,6 +63,8 @@ export default function MainNav(){
             <br />
               <Form.Control
                 type="search"
+                id="searchField"
+                name="searchField"
                 placeholder="Search"
                 className="me-2"
                 aria-label="Search"
