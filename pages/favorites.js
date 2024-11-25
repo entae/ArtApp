@@ -14,7 +14,7 @@ export default function Favourites() {
       {favouritesList.length > 0 ? (
         <Row className="gy-4">
           {favouritesList.map((objID) => (
-            <Col lg={3} key={objID}>
+            <Col lg={3} sm={6} key={objID}>
               <ArtworkCard objectID={objID} />
             </Col>
           ))}

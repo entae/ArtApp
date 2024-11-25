@@ -52,7 +52,7 @@ export default function Artwork() {
         {lastPage > 0 ?
 
           <Row className="gy-4">{artworkList[page - 1]?.map(objID => (
-            <Col lg={3} key={objID}><ArtworkCard objectID={objID} /></Col>
+            <Col lg={3} sm={6} key={objID}><ArtworkCard objectID={objID} /></Col>
           ))}</Row>
 
           :
