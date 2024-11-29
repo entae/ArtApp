@@ -77,12 +77,12 @@ export default function Artwork() {
                 )}
 
                 {page > 2 && (
-                  <Pagination.Item onClick={() => handlePage(page - 2)} key={page - 2} >
+                  <Pagination.Item onClick={() => handlePage(page - 2)} key={`page-${page - 2}`} >
                     {page - 2}
                   </Pagination.Item>
                 )}
                 {page > 1 && (
-                  <Pagination.Item onClick={() => handlePage(page - 1)} key={page - 1} >
+                  <Pagination.Item onClick={() => handlePage(page - 1)} key={`page-${page - 1}`} >
                     {page - 1}
                   </Pagination.Item>
                 )}
@@ -92,18 +92,18 @@ export default function Artwork() {
                   active
                   tabIndex={0}
                   aria-current="page"
-                  key={page}
+                  key={`current-page-${page}`}
                 >
                   {page}
                 </Pagination.Item>
 
                 {page < lastPage && (
-                  <Pagination.Item onClick={() => handlePage(page + 1)} key={page + 1} >
+                  <Pagination.Item onClick={() => handlePage(page + 1)} key={`page-${page + 1}`} >
                     {page + 1}
                   </Pagination.Item>
                 )}
                 {page < lastPage - 1 && (
-                  <Pagination.Item onClick={() => handlePage(page + 2)} key={page + 2} >
+                  <Pagination.Item onClick={() => handlePage(page + 2)} key={`page-${page + 2}`} >
                     {page + 2}
                   </Pagination.Item>
                 )}
