@@ -73,7 +73,7 @@ export default function Artwork() {
               <Pagination>
                 {page > 2 && <Pagination.First onClick={() => handlePage(1)} key="first" />}
                 {page > 1 && (
-                  <Pagination.Prev onClick={() => handlePage(page - 1)} key="prev" />
+                  <Pagination.Prev onClick={() => handlePage(page - 1)} key={`prev${page}`} />
                 )}
 
                 {page > 2 && (
@@ -109,7 +109,7 @@ export default function Artwork() {
                 )}
 
                 {page < lastPage && (
-                  <Pagination.Next onClick={() => handlePage(page + 1)} key="next" />
+                  <Pagination.Next onClick={() => handlePage(page + 1)} key={`next${page}`} />
                 )}
                 {page < lastPage - 1 && (
                   <Pagination.Last onClick={() => handlePage(lastPage)} key="last" />
