@@ -12,7 +12,7 @@ export default function About() {
     <>
       <Row>
         <Col lg={6}>
-          <h5>About This Project.</h5>
+          <h5>About This Project</h5>
           <p>
             This website uses Next.js and Bootstrap CSS to allow users to easily
             register, navigate, search, and store artworks under the collection
@@ -42,7 +42,7 @@ export default function About() {
         </Col>
         <Col lg={6}>
           <h5>
-            <emphasis>About InTae Chung.</emphasis>
+            About InTae Chung
           </h5>
           <p>
             InTae Chung has built his fundamental programming skills while
