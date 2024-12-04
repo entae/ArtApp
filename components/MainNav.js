@@ -41,7 +41,7 @@ export default function MainNav(){
     <Navbar  expand="lg" className="fixed-top navbar-dark bg-primary" expanded={isExpanded}>
       <Container>
       <Navbar.Brand>
-          <Link href="https://github.com/entae" passHref legacyBehavior>
+          <Link href="https://www.linkedin.com/in/intae-chung-a12108140/" passHref legacyBehavior>
             <a className="text-white text-decoration-none" target="_blank" rel="noopener noreferrer">
               InTae Chung
             </a>
