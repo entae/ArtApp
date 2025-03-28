@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Button, Card } from 'react-bootstrap';
+import { Button, Card, Image } from 'react-bootstrap';
 import useSWR from 'swr';
 import Error from 'next/error';
 
@@ -14,7 +14,7 @@ export default function ArtworkCard({objectID}){
   if(data){
     return (<>
       <Card>
-          <Card.Img variant="top" src={data.primaryImageSmall ? data.primaryImageSmall : 'https://via.placeholder.com/375x375.png?text=[+Not+Available+]' } />
+          <Card.Img variant="top" src={data.primaryImageSmall ? data.primaryImageSmall : 'no-image.svg' } />
           <Card.Body>
             <Card.Title>{data?.title || "N/A"}</Card.Title>
             <Card.Text>
